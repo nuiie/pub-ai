@@ -14,13 +14,15 @@ export function ProductSpecs() {
 
   return (
     <div>
-      <h2 className="mb-4 text-xl font-semibold">Specifications</h2>
+      <h2 className="mb-3 text-lg font-semibold md:mb-4 md:text-xl">Specifications</h2>
       <table className="w-full border border-gray-200">
         <tbody>
           {specs.map((spec, index) => (
             <tr key={index} className={index !== specs.length - 1 ? "border-b border-gray-200" : ""}>
-              <td className="border-r border-gray-200 py-2 pl-2 text-sm font-semibold">{spec.name}</td>
-              <td className="py-2 pl-2 text-sm">{spec.value}</td>
+              <td className="border-r border-gray-200 py-1 pl-2 text-xs font-semibold md:py-2 md:text-sm">
+                {spec.name}
+              </td>
+              <td className="py-1 pl-2 text-xs md:py-2 md:text-sm">{spec.value}</td>
             </tr>
           ))}
         </tbody>

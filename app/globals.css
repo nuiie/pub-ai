@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --font-primary: "Arial", "Helvetica", sans-serif;
+  --font-primary: "Helvetica", "Arial", sans-serif;
 }
 
 body {
@@ -94,4 +94,29 @@ input[type="number"] {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #ccc;
+}
+
+/* Navbar */
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  text-transform: capitalize !important; /* Override any uppercase styling */
+}
+
+/* Footer */
+.compact-footer {
+  padding: 1.5rem 0;
+  font-size: 0.8rem;
 }
