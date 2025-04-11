@@ -17,28 +17,25 @@ export function ProductList() {
   ]
 
   return (
-    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
       {products.map((product) => (
         <Link
           key={product.id}
           href={`/products/${product.id}`}
           className="group bg-white transition-colors hover:bg-gray-100"
         >
-          <div className="aspect-square border-b border-gray-200 bg-white p-4">
+          <div className="aspect-square border border-gray-200 bg-white p-3">
             <img
-              src={`/placeholder.svg?height=200&width=200&text=${product.name}`}
+              src={`/placeholder.svg?height=150&width=150&text=${product.name}`}
               alt={product.name}
               className="h-full w-full object-contain"
             />
           </div>
-          <div className="p-4">
-            <div className="mb-1 text-xs">{product.category}</div>
-            <h3 className="mb-2 text-base font-semibold">{product.name}</h3>
-            <p className="mb-2 text-lg font-semibold">${product.price.toFixed(2)}</p>
-            <p className="mb-3 text-xs">{product.stock}</p>
-            <div className="text-xs">
-              <span className="border-b border-gray-400 pb-1 group-hover:text-gray-700">View details</span>
-            </div>
+          <div className="p-2">
+            <div className="mb-1 text-xs text-gray-500">{product.category}</div>
+            <h3 className="mb-1 text-xs font-semibold line-clamp-2">{product.name}</h3>
+            <p className="mb-1 text-xs font-semibold">${product.price.toFixed(2)}</p>
+            <p className="text-xs text-gray-500">{product.stock}</p>
           </div>
         </Link>
       ))}

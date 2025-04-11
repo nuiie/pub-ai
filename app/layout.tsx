@@ -7,7 +7,6 @@ import "./globals.css"
 export const metadata: Metadata = {
   title: "Telecom Hardware Supply - Industrial Grade Components",
   description: "High-quality galvanized steel and electrical hardware for telecommunications infrastructure",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -19,12 +18,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
-        <div className="mx-auto max-w-3xl px-4">{children}</div>
+        <div className="mx-auto max-w-5xl px-4">{children}</div>
         <Footer />
       </body>
     </html>
   )
 }
-
-
-import './globals.css'

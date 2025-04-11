@@ -1,22 +1,22 @@
 export function Pagination() {
   return (
-    <div className="mt-12 flex justify-center gap-2">
-      <a href="#" className="border border-gray-200 px-4 py-2 text-sm text-gray-500 hover:bg-gray-100">
+    <div className="mt-8 flex justify-center gap-6">
+      <a href="#" className="text-sm text-gray-500 hover:underline">
         Prev
       </a>
-      <a href="#" className="bg-black px-4 py-2 text-sm text-white">
+      <a href="#" className="text-sm font-medium underline">
         1
       </a>
-      <a href="#" className="border border-gray-200 px-4 py-2 text-sm hover:bg-gray-100">
+      <a href="#" className="text-sm hover:underline">
         2
       </a>
-      <a href="#" className="border border-gray-200 px-4 py-2 text-sm hover:bg-gray-100">
+      <a href="#" className="text-sm hover:underline">
         3
       </a>
-      <a href="#" className="border border-gray-200 px-4 py-2 text-sm hover:bg-gray-100">
+      <a href="#" className="text-sm hover:underline">
         4
       </a>
-      <a href="#" className="border border-gray-200 px-4 py-2 text-sm hover:bg-gray-100">
+      <a href="#" className="text-sm text-gray-500 hover:underline">
         Next
       </a>
     </div>

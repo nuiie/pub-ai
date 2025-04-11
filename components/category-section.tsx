@@ -176,7 +176,7 @@ export function CategorySection() {
           <h3 className="mb-3 border-b border-gray-300 pb-2 text-lg font-semibold md:mb-4 md:text-xl">
             {category.name}
           </h3>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
             {category.subcategories.map((subcategory) => (
               <Link
                 key={subcategory.id}

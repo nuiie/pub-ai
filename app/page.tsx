@@ -1,14 +1,9 @@
-import { SearchBar } from "@/components/search-bar"
 import { CategorySection } from "@/components/category-section"
 import { PopularProducts } from "@/components/popular-products"
 
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-white py-8">
-      <div className="mb-8">
-        <SearchBar />
-      </div>
-
       <section className="mb-12">
         <CategorySection />
       </section>

@@ -1,6 +1,3 @@
-import Link from "next/link"
-import { SearchBar } from "@/components/search-bar"
-
 export default function CapabilitiesPage() {
   const capabilities = [
     {
@@ -50,39 +47,25 @@ export default function CapabilitiesPage() {
   ]
 
   return (
-    <main className="min-h-screen bg-white">
-      <div className="container mx-auto px-4 py-8">
-        <div className="mb-6">
-          <SearchBar />
+    <main className="min-h-screen bg-white py-8">
+      <section>
+        <h2 className="mb-8 text-3xl font-semibold">Our Capabilities</h2>
+
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          {capabilities.map((capability, index) => (
+            <div key={index} className="border border-gray-200 p-6">
+              <h3 className="mb-4 text-xl font-semibold">{capability.title}</h3>
+              <ul className="space-y-2">
+                {capability.items.map((item, itemIndex) => (
+                  <li key={itemIndex} className="text-sm">
+                    • {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
-
-        <div className="mb-6">
-          <Link href="/" className="text-sm hover:underline">
-            Home
-          </Link>
-          {" > "}
-          <span className="text-sm">Capabilities</span>
-        </div>
-
-        <section>
-          <h2 className="mb-8 text-3xl font-semibold">Our Capabilities</h2>
-
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            {capabilities.map((capability, index) => (
-              <div key={index} className="border border-gray-200 p-6">
-                <h3 className="mb-4 text-xl font-semibold">{capability.title}</h3>
-                <ul className="space-y-2">
-                  {capability.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="text-sm">
-                      • {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section>
-      </div>
+      </section>
     </main>
   )
 }

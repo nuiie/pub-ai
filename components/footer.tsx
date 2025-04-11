@@ -3,7 +3,7 @@ import Link from "next/link"
 export function Footer() {
   return (
     <footer className="border-t border-gray-200 bg-white">
-      <div className="mx-auto max-w-3xl px-4">
+      <div className="mx-auto max-w-5xl px-4">
         <div className="compact-footer flex flex-col items-center justify-center space-y-2 py-6 text-center">
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/terms" className="text-sm hover:underline">
