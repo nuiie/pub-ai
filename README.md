@@ -205,3 +205,63 @@ erDiagram
   products ||--o{ product_tags : tagged
   tags ||--o{ product_tags : includes
 ```
+
+
+---
+
+new mermaid product only, collection.
+```mermaid
+erDiagram
+    PRODUCT {
+        int id PK
+        string code
+        string name
+        string description
+    }
+
+    PRODUCT_OPTION {
+        int id PK
+        int product_id FK
+        string name
+    }
+
+    PRODUCT_OPTION_VALUE {
+        int id PK
+        int option_id FK
+        string value
+    }
+
+    VARIANT {
+        int id PK
+        int product_id FK
+        string sku
+        float price
+        int stock
+    }
+
+    VARIANT_OPTION_VALUE {
+        int id PK
+        int variant_id FK
+        int option_value_id FK
+    }
+
+    COLLECTION {
+        int id PK
+        string name
+        string description
+    }
+
+    PRODUCT_COLLECTION {
+        int id PK
+        int product_id FK
+        int collection_id FK
+    }
+
+    PRODUCT ||--o{ PRODUCT_OPTION : "has many"
+    PRODUCT_OPTION ||--o{ PRODUCT_OPTION_VALUE : "has many"
+    PRODUCT ||--o{ VARIANT : "has many"
+    VARIANT ||--o{ VARIANT_OPTION_VALUE : "uses values"
+    PRODUCT_OPTION_VALUE ||--o{ VARIANT_OPTION_VALUE : "used in"
+    PRODUCT ||--o{ PRODUCT_COLLECTION : "belongs to many (via)"
+    COLLECTION ||--o{ PRODUCT_COLLECTION : "has many (via)"
+```
